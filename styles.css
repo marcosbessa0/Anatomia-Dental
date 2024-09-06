@@ -190,7 +190,7 @@ footer {
   padding: 10px 20px;
   text-align: center;
   font-size: 0.9em;
-  color: #666;
+  color: hsl(0, 22%, 96%);
   border-top: 1px solid #d1e0e0; /* Azul muito claro */
   transition: background-color 0.3s ease;
 }
