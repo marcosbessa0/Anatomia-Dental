@@ -174,12 +174,19 @@ main {
   border: 1px solid #d1d1d1; /* Azul muito claro */
   border-radius: 8px;
   background-color: #ffffff; /* Branco */
+  color: #333; /* Cor padrão do texto (preto) */
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #16a085(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
+#results-container h2 {
+  margin-bottom: 20px;
+  color: #1abc9c; /* Verde água para os títulos */
+}
+
 body.dark-mode #results-container {
+  color: #fff; /* Cor do texto em modo escuro */
   background-color: #34495e; /* Azul escuro */
   border: 1px solid #1abc9c; /* Verde água */
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
@@ -190,7 +197,7 @@ footer {
   padding: 10px 20px;
   text-align: center;
   font-size: 0.9em;
-  color: hsl(0, 22%, 96%);
+  color: hsl(0, 0%, 5%);
   border-top: 1px solid #d1e0e0; /* Azul muito claro */
   transition: background-color 0.3s ease;
 }
@@ -415,6 +422,14 @@ blockquote {
   border-radius: 5px; /* Bordas arredondadas */
   margin: 20px 0;
 }
+
+#meu-rodape {
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com 80% de opacidade */
+  color: white;
+  padding: 10px; /* Adiciona um espaço interno para melhor visualização */
+  text-align: center; /* Centraliza o texto */
+}
+
 /* Modo Escuro para Nossa História */
 body.dark-mode .company-history,
 body.dark-mode .timeline li {
