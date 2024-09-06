@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: url('images/background.jpg') no-repeat center center fixed; /* Adiciona a imagem de fundo */
+  background: url('background.jpg') no-repeat center center fixed; /* Adiciona a imagem de fundo */
   background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
   color: #333;
   display: flex;
@@ -13,14 +13,14 @@ body {
 
 /* Modo Escuro */
 body.dark-mode {
-  background: url('images/background-dark.jpg') no-repeat center center fixed; /* Tenta usar uma imagem específica para o modo escuro */
+  background: url('background-dark.jpg') no-repeat center center fixed; /* Tenta usar uma imagem específica para o modo escuro */
   background-size: cover;
   color: #ecf0f1; /* Branco gelo */
 }
 
 /* Ajuste para fallback se a imagem escura não estiver disponível */
 body.dark-mode {
-  background: url('images/background-dark.jpg'), url('images/background.jpg'); /* Usa a imagem escura ou, se não disponível, a padrão */
+  background: url('background-dark.jpg'), url('background.jpg'); /* Usa a imagem escura ou, se não disponível, a padrão */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
