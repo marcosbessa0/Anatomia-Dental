@@ -1,0 +1,418 @@
+/* Estilos Globais */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #eaf4f4; /* Azul claro suave */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background-color: #2c3e50; /* Azul escuro */
+  color: #ecf0f1; /* Branco gelo */
+}
+
+header, footer {
+  background-color: #ffffff; /* Branco */
+  border-bottom: 1px solid #d1e0e0; /* Azul muito claro */
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode header, body.dark-mode footer {
+  background-color: #34495e; /* Azul escuro */
+}
+
+/* Toggle Dark Mode */
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #1abc9c; /* Verde água */
+}
+
+/* Cabeçalho */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #1abc9c; /* Verde água */
+}
+
+.nav-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #2c3e50; /* Azul escuro */
+  padding: 10px;
+  display: block;
+}
+
+.nav-menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* Branco */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.nav-menu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+body.dark-mode .nav-menu a {
+  color: #ecf0f1; /* Branco gelo */
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* Branco */
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.dropdown-content a {
+  color: #2c3e50; /* Azul escuro */
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #d1e0e0; /* Azul muito claro */
+}
+
+body.dark-mode .dropdown-content {
+  background-color: #34495e; /* Azul escuro */
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .dropdown-content a:hover {
+  background-color: #1abc9c; /* Verde água */
+}
+
+/* Campo de Pesquisa */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+}
+
+#search-bar {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #d1e0e0; /* Azul muito claro */
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+#search-button {
+  padding: 10px 20px;
+  background-color: #1abc9c; /* Verde água */
+  color: #ffffff; /* Branco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #16a085; /* Verde mais escuro */
+}
+
+/* Estilo das Caixas de Resultados */
+#results-container {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #d1d1d1; /* Azul muito claro */
+  border-radius: 8px;
+  background-color: #ffffff; /* Branco */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #results-container {
+  background-color: #34495e; /* Azul escuro */
+  border: 1px solid #1abc9c; /* Verde água */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+#results-container h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #1abc9c; /* Verde água */
+  border-bottom: 1px solid #e0f7f7; /* Azul muito claro */
+  padding-bottom: 10px;
+}
+
+body.dark-mode #results-container h2 {
+  color: #1abc9c; /* Verde água */
+  border-bottom: 1px solid #1abc9c; /* Verde água */
+}
+
+#result-details, #internal-details {
+  margin: 10px 0;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333;
+}
+
+body.dark-mode #result-details, body.dark-mode #internal-details {
+  color: #ecf0f1; /* Branco gelo */
+}
+
+/* Rodapé */
+footer {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  border-top: 1px solid #d1e0e0; /* Azul muito claro */
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode footer {
+  border-top: 1px solid #1abc9c; /* Verde água */
+}
+
+/* Responsividade da navegação */
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eaf4f4; /* Azul claro suave */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+#3d-model {
+  width: 80%;
+  height: 500px;
+  margin: 20px auto;
+}
+
+/* Edita arq Team */
+/* styles.css */
+
+body {
+  font-family: 'Montserrat', sans-serif; /* Font personalizada */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Seção da Equipe */
+.team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member img:hover {
+  transform: scale(1.1);
+}
+
+.team-member h2 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #3498db; /* Azul claro */
+}
+
+.team-member p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Botão de Contato */
+.team-member button {
+  background-color: #3498db; /* Azul claro */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.team-member button:hover {
+  background-color: #2980b9; /* Azul mais escuro */
+}
+
+/* Seção Missão e Valores */
+.mission, .values {
+  text-align: center;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mission, .values:hover {
+  transform: scale(1.05);
+}
+
+.values ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.values li {
+  margin-bottom: 15px;
+}
+
+.mission-in-action {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.mission-in-action img {
+  max-width: 35%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mission-in-action img:hover {
+  transform: scale(1.1);
+}
+
+/* Seção Nossa História */
+.company-history {
+  text-align: center;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timeline li {
+  flex: 0 0 30%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline li:hover {
+  transform: scale(1.05);
+}
+
+.timeline h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #3498db; /* Azul claro */
+}
+
+.timeline p {
+  line-height: 1.5;
+  color: #666;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-gallery img {
+  max-width: 30%;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 15px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #666;
+}

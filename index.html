@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BESSA OdontoResearch - Pesquisa e informações sobre anatomia dental.">
+    <title>Anatomia Dental</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">BESSA OdontoResearch</div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fa-solid fa-circle-info"></i> A Empresa <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="history.html"><i class="fa-solid fa-clock"></i> História da Empresa</a></li>
+                        <li><a href="team.html"><i class="fa-solid fa-users"></i> Nossa Equipe</a></li>
+                        <li><a href="mission.html"><i class="fa-solid fa-handshake"></i> Missão e Valores</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button id="dark-mode-toggle" aria-label="Alternar modo escuro">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Campo de Pesquisa -->
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Pesquise por um dente (ex: '23' ou 'Canino superior esquerdo')...">
+            <button type="submit" id="search-button" aria-label="Pesquisar">Pesquisar</button>
+        </div>
+        <select id="filter-select">
+            <option value="todos">Todos</option>
+            <option value="incisivo">Incisivo</option>
+            <option value="canino">Canino</option>
+            <option value="pré-molar">Pré-molar</option>
+            <option value="molar">Molar</option>
+        </select>
+        <div id="results-container" class="hidden">
+            <h2>Características Morfológicas</h2>
+            <p id="result-details"></p>
+            
+            <h2>Características Anatômicas Internas</h2>
+            <p id="internal-details"></p>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 BESSA OdontoResearch. Todos os direitos reservados. | Contato: marcos.bessa@ics.ufpa.br | Instagram: <a href="https://www.instagram.com/marc0s.bessa/">@marc0s.bessa</a>
+    </footer>
+    <div id="3d-model"></div>
+    <script src="script.js"></script>
+</body>
+</html>
